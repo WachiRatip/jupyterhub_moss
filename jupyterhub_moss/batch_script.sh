@@ -7,6 +7,7 @@
 {% endif %}{% if partition  %}#SBATCH --partition={{partition}}
 {% endif %}{% if runtime    %}#SBATCH --time={{runtime}}
 {% endif %}{% if memory     %}#SBATCH --mem={{memory}}
+{% else %}#SBATCH --mem=8G
 {% endif %}{% if gres       %}#SBATCH --gres={{gres}}
 {% endif %}{% if nprocs     %}#SBATCH --cpus-per-task={{nprocs}}
 {% endif %}{% if reservation%}#SBATCH --reservation={{reservation}}
